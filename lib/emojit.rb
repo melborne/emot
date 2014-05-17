@@ -1,6 +1,7 @@
 require "emojit/version"
 require "emojit/map"
 require "emojit/symbol_ext"
+require "emojit/cli"
 
 module Emojit
   def icon(name)
