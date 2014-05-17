@@ -30,3 +30,21 @@ describe Emojit do
     end
   end
 end
+
+describe Symbol do
+  describe "#~" do
+    it "returns emoji string" do
+      expect(~:smile).to eq "\u{1F604}"
+      expect(~:jack_o_lantern).to eq "\u{1F383}"
+    end
+
+    it "returns emoji mixed string" do
+      expect(~:'dango is better than sunflower').to eq "\u{1F361} is better than \u{1F33B}"
+      expect(~:'fish + hocho => sushi').to eq "\u{1F41F} + \u{1F52A} => \u{1F363}"
+    end
+
+    it "escape emojiaze with prefix '.'" do
+      expect(~:'jp + .us + .fr').to eq "\u{1F1EF}\u{1F1F5} + us + fr"
+    end
+  end
+end
