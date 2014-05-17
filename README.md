@@ -35,7 +35,7 @@ With Ruby,
 ```ruby
 require 'emojit'
 
-Emojit.icon(:sunflower) # =>  í ¼í¼»
+Emojit.icon(:sunflower) # => ğŸŒ»
 
 Emojit.unicode(:sunflower) # => "U+1F33B"
 ```
@@ -57,17 +57,17 @@ puts ~:"ç–²ã‚ŒãŸã‚‰ beer ã‚’é£²ã‚‚ã†ï¼"
 puts ~:"fish + hocho => sushi"
 puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
 
-# >> í ½í¸„
-# >> í ½í´°
-# >> í ½í²©
-# >> í ¼í¾ƒ
-# >> í ½í±
-# >> I í ½í²” you!
-# >> The Pencil is mightier than í ½í´«
-# >> Dango is better than í ¼í¼»
-# >> ç–²ã‚ŒãŸã‚‰ í ¼í½º ã‚’é£²ã‚‚ã†ï¼
-# >> í ½í°Ÿ + í ½í´ª => í ¼í½£
-# >> fush + hocho => í ¼í½£
+# >> ğŸ˜„
+# >> ğŸ”°
+# >> ğŸ’©
+# >> ğŸƒ
+# >> ğŸ‘
+# >> I ğŸ’” you!
+# >> The Pencil is mightier than ğŸ”«
+# >> Dango is better than ğŸŒ»
+# >> ç–²ã‚ŒãŸã‚‰ ğŸº ã‚’é£²ã‚‚ã†ï¼
+# >> ğŸŸ + ğŸ”ª => ğŸ£
+# >> fush + hocho => ğŸ£
 ```
 
 ## Thank you
