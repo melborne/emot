@@ -21,7 +21,7 @@ Or install it yourself as:
 ```ruby
 require 'emojit'
 
-Emojit.icon(:sunflower) # => "\u{1F33B}"
+Emojit.icon(:sunflower) # =>  í ¼í¼»
 
 Emojit.unicode(:sunflower) # => "U+1F33B"
 ```
