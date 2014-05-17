@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Emojit::VERSION
   spec.authors       = ["kyoendo"]
   spec.email         = ["postagie@gmail.com"]
-  spec.summary       = %q{Yet another emoji name-unicode converter.}
-  spec.description   = %q{Yet another emoji name-unicode converter. Add Symbol#~ for the converter.}
+  spec.summary       = %q{Yet another emoji handler.}
+  spec.description   = %q{Yet another emoji handler.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
