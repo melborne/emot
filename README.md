@@ -1,6 +1,6 @@
 # Emojit
 
-TODO: Write a gem description
+Yet another emoji name-unicode converter.
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'emojit'
+
+Emojit.icon(:sunflower) # => "\u{1F33B}"
+
+Emojit.unicode(:sunflower) # => "U+1F33B"
+```
 
 ## Contributing
 
