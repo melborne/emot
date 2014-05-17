@@ -51,8 +51,8 @@ puts ~:shit
 puts ~:jack_o_lantern
 puts ~:'+1'
 puts ~:"I broken_heart you!"
-puts ~:"The Pencil is mightier than gun"
-puts ~:"Dango is better than sunflower"
+puts ~:"The pencil is mightier than gun"
+puts ~:"dango is better than sunflower"
 puts ~:"疲れたら beer を飲もう！"
 puts ~:"fish + hocho => sushi"
 puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
@@ -63,8 +63,8 @@ puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
 # >> 🎃
 # >> 👍
 # >> I 💔 you!
-# >> The Pencil is mightier than 🔫
-# >> Dango is better than 🌻
+# >> The 📝 is mightier than 🔫
+# >> 🍡 is better than 🌻
 # >> 疲れたら 🍺 を飲もう！
 # >> 🐟 + 🔪 => 🍣
 # >> fush + hocho => 🍣
