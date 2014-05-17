@@ -17,12 +17,17 @@ module Emojit
             when 'emoji'
               "%s" % [icon]
             else
-              "%s: %s (%s)" % [icon ,name, code]
+              "%s %s (%s)" % [icon ,name, code]
             end
           end
         puts list.join("  ")
       else
-        print "%s %s\n" % Emojit.list[name.intern]
+        icon, code = Emojit.list[name.intern]
+        if icon
+          print "%s %s (%s)\n" % [icon, name, code]
+        else
+          puts "No emoji for '#{name}'"
+        end
       end
     end
   end
