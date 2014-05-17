@@ -3,7 +3,7 @@ require "thor"
 module Emojit
   class CLI < Thor
     desc "show [NAME]", "show emoji icon and unicode"
-    option :only
+    option :only, aliases:'-o'
     def show(name=nil)
       case name
       when nil, 'all'
@@ -11,24 +11,36 @@ module Emojit
           Emojit.list.map do |name, (icon, code)|
             case options[:only]
             when 'name'
-              "%s: %s" % [icon, name]
+              "%s  %s" % [icon, name]
             when 'code', 'unicode'
-              "%s: %s" % [icon, code]
-            when 'emoji'
+              "%s  %s" % [icon, code]
+            when 'emoji', 'icon'
               "%s" % [icon]
+            when 'nameonly'
+              "%s" % [name]
             else
-              "%s %s (%s)" % [icon ,name, code]
+              "%s  %s (%s)" % [icon ,name, code]
             end
           end
         puts list.join("  ")
       else
         icon, code = Emojit.list[name.intern]
         if icon
-          print "%s %s (%s)\n" % [icon, name, code]
+          print "%s  %s (%s)\n" % [icon, name, code]
         else
           puts "No emoji for '#{name}'"
         end
       end
+    end
+
+    desc "icons", "show all emoji icons"
+    def icons
+      CLI.start(['show', '--only', 'emoji'])
+    end
+
+    desc "names", "show all available names for emoji"
+    def names
+      CLI.start(['show', '--only', 'nameonly'])
     end
   end
 end
