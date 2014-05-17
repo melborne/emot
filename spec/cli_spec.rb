@@ -13,7 +13,7 @@ describe Emojit::CLI do
     context "with emoji name" do
       it "outputs icon with its unicode" do
         Emojit::CLI.start(['show', 'sunflower'])
-        expect($stdout.string).to eq "\u{1F33B}  sunflower (U+1F33B)\n"
+        expect($stdout.string).to eq "\u{1F33B}  \e[32msunflower\e[0m (U+1F33B)\n"
       end
 
       it "outputs no emoji message" do
