@@ -12,22 +12,23 @@ module Emojit
           Emojit.list.map do |name, (icon, code)|
             case options[:only]
             when 'name'
-              "%s  %s" % [icon, name]
+              "%s  %s" % [icon, c(name)]
             when 'code', 'unicode'
               "%s  %s" % [icon, code]
             when 'emoji', 'icon'
               "%s" % [icon]
             when 'nameonly'
-              "%s" % [name]
+              "%s" % [c(name)]
             else
-              "%s  %s (%s)" % [icon ,name, code]
+              "%s  %s (%s)" % [icon ,c(name), code]
             end
           end
         puts (options[:inline] ? list.join("  ") : list)
+        puts "\e[33m#{list.size}\e[0m #{c('emojis')}"
       else
         icon, code = Emojit.list[name.intern]
         if icon
-          print "%s  %s (%s)\n" % [icon, name, code]
+          print "%s  %s (%s)\n" % [icon, c(name), code]
         else
           puts "No emoji for '#{name}'"
         end
@@ -42,6 +43,12 @@ module Emojit
     desc "names", "show all available names for emoji"
     def names
       CLI.start(['show', '--only', 'nameonly'])
+    end
+
+    no_tasks do
+      def c(str, color=32)
+        "\e[#{color}m#{str}\e[0m"
+      end
     end
   end
 end
