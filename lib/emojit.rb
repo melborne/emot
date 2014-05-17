@@ -11,6 +11,7 @@ module Emojit
       nil
     end
   end
+  alias :emoji :icon
 
   def unicode(name)
     if codes = MAP[name.intern]
