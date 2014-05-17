@@ -25,12 +25,12 @@ describe Emojit::CLI do
     context "without emoji name" do
       it "outputs all emoji with name and unicode" do
         Emojit::CLI.start(['show'])
-        expect($stdout.string).to match /hash.*sunflower.*1F618.*bathtub/
+        expect($stdout.string).to match /hash.*sunflower.*1F618.*bathtub/m
       end
 
       it "outputs all emoji with name" do
         Emojit::CLI.start(['show', '--only', 'name'])
-        expect($stdout.string).to match /hash.*sunflower.*bathtub/
+        expect($stdout.string).to match /hash.*sunflower.*bathtub/m
         expect($stdout.string).not_to match /1F618/
       end
     end
@@ -48,7 +48,7 @@ describe Emojit::CLI do
   describe "#names" do
     it "outputs all available names for emojis" do
       Emojit::CLI.start(['names'])
-      expect($stdout.string).to match /hash.*sunflower.*bathtub/
+      expect($stdout.string).to match /hash.*sunflower.*bathtub/m
       expect($stdout.string).not_to match /\u{1F33B}/
       expect($stdout.string).not_to match /1F33B/
     end

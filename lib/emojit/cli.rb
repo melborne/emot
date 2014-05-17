@@ -2,8 +2,9 @@ require "thor"
 
 module Emojit
   class CLI < Thor
-    desc "show [NAME]", "show emoji icon and unicode"
+    desc "show [NAME]", "show emoji icon and unicode for NAME"
     option :only, aliases:'-o'
+    option :inline, aliases:'-i', default:false, type: :boolean
     def show(name=nil)
       case name
       when nil, 'all'
@@ -22,7 +23,7 @@ module Emojit
               "%s  %s (%s)" % [icon ,name, code]
             end
           end
-        puts list.join("  ")
+        puts (options[:inline] ? list.join("  ") : list)
       else
         icon, code = Emojit.list[name.intern]
         if icon
@@ -35,7 +36,7 @@ module Emojit
 
     desc "icons", "show all emoji icons"
     def icons
-      CLI.start(['show', '--only', 'emoji'])
+      CLI.start(['show', '--only', 'emoji', '--inline', false])
     end
 
     desc "names", "show all available names for emoji"
