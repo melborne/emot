@@ -39,7 +39,6 @@ Emojit.icon(:sunflower) # =>  í ¼í¼»
 
 Emojit.unicode(:sunflower) # => "U+1F33B"
 ```
-í ¼í¼»
 
 Also, you can get Symbol#~ for emoji output.
 
@@ -57,32 +56,19 @@ puts ~:"Dango is better than sunflower"
 puts ~:"ç–²ã‚ŒãŸã‚‰ beer ã‚’é£²ã‚‚ã†ï¼"
 puts ~:"fish + hocho => sushi"
 puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
+
+# >> í ½í¸„
+# >> í ½í´°
+# >> í ½í²©
+# >> í ¼í¾ƒ
+# >> í ½í±
+# >> I í ½í²” you!
+# >> The Pencil is mightier than í ½í´«
+# >> Dango is better than í ¼í¼»
+# >> ç–²ã‚ŒãŸã‚‰ í ¼í½º ã‚’é£²ã‚‚ã†ï¼
+# >> í ½í°Ÿ + í ½í´ª => í ¼í½£
+# >> fush + hocho => í ¼í½£
 ```
-
-It gets them.
-
- í ½í¸„
-
- í ½í´°
-
- í ½í²©
-
- í ¼í¾ƒ
-
- í ½í±
-
- I í ½í²” you!
-
- The Pencil is mightier than í ½í´«
-
- Dango is better than í ¼í¼»
-
- ç–²ã‚ŒãŸã‚‰ í ¼í½º ã‚’é£²ã‚‚ã†ï¼
-
- í ½í°Ÿ + í ½í´ª => í ¼í½£
-
- fush + hocho => í ¼í½£
-
 
 ## Thank you
 
