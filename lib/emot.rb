@@ -23,11 +23,11 @@ module Emot
 
   private
   def build_icon(codes)
-    codes.map { |code| code.to_i(16) }.pack("U*") if codes
+    codes.pack("U*") if codes
   end
 
   def build_unicode(codes)
-    codes.map { |code| "U+#{code}" }.join(" ") if codes
+    codes.map { |code| "U+#{code.to_s(16).upcase}" }.join(" ") if codes
   end
 
   extend self
