@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'emojit/version'
+require 'emot/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "emojit"
-  spec.version       = Emojit::VERSION
+  spec.name          = "emot"
+  spec.version       = Emot::VERSION
   spec.authors       = ["kyoendo"]
   spec.email         = ["postagie@gmail.com"]
   spec.summary       = %q{Yet another emoji handler.}

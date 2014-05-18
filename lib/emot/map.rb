@@ -1,4 +1,4 @@
-module Emojit
+module Emot
   MAP = {
     :"+1"                              => ["1F44D"],
     :"-1"                              => ["1F44E"],

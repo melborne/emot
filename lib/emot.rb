@@ -1,9 +1,9 @@
-require "emojit/version"
-require "emojit/map"
-require "emojit/symbol_ext"
-require "emojit/cli"
+require "emot/version"
+require "emot/map"
+require "emot/symbol_ext"
+require "emot/cli"
 
-module Emojit
+module Emot
   def icon(name)
     if codes = MAP[name.intern]
       build_icon(codes)

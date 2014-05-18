@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Emojit::CLI do
+describe Emot::CLI do
   before do
     $stdout, $stderr = StringIO.new, StringIO.new
   end
@@ -12,24 +12,24 @@ describe Emojit::CLI do
   describe "#show" do
     context "with emoji name" do
       it "outputs icon with its unicode" do
-        Emojit::CLI.start(['show', 'sunflower'])
+        Emot::CLI.start(['show', 'sunflower'])
         expect($stdout.string).to eq "\u{1F33B}  \e[32msunflower\e[0m (U+1F33B)\n"
       end
 
       it "outputs no emoji message" do
-        Emojit::CLI.start(['show', 'hello'])
+        Emot::CLI.start(['show', 'hello'])
         expect($stdout.string).to eq "No emoji for 'hello'\n"
       end
     end
 
     context "without emoji name" do
       it "outputs all emoji with name and unicode" do
-        Emojit::CLI.start(['show'])
+        Emot::CLI.start(['show'])
         expect($stdout.string).to match /hash.*sunflower.*1F618.*bathtub/m
       end
 
       it "outputs all emoji with name" do
-        Emojit::CLI.start(['show', '--only', 'name'])
+        Emot::CLI.start(['show', '--only', 'name'])
         expect($stdout.string).to match /hash.*sunflower.*bathtub/m
         expect($stdout.string).not_to match /1F618/
       end
@@ -38,7 +38,7 @@ describe Emojit::CLI do
 
   describe "#icons" do
     it "outputs all emoji icons" do
-      Emojit::CLI.start(['icons'])
+      Emot::CLI.start(['icons'])
       expect($stdout.string).to match /\u{1F33B}/
       expect($stdout.string).not_to match /sunflower/
       expect($stdout.string).not_to match /1F33B/
@@ -47,7 +47,7 @@ describe Emojit::CLI do
 
   describe "#names" do
     it "outputs all available names for emojis" do
-      Emojit::CLI.start(['names'])
+      Emot::CLI.start(['names'])
       expect($stdout.string).to match /hash.*sunflower.*bathtub/m
       expect($stdout.string).not_to match /\u{1F33B}/
       expect($stdout.string).not_to match /1F33B/
