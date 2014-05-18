@@ -3,7 +3,7 @@ require "thor"
 module Emot
   class CLI < Thor
     desc "show [NAME]", "show emoji icon and unicode for NAME"
-    option :only, aliases:'-o'
+    option :only, aliases:'-o', desc:"set 'name', 'code' or 'icon'"
     option :inline, aliases:'-i', default:false, type: :boolean
     def show(name=nil)
       case name

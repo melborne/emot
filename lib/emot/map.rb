@@ -890,4 +890,3 @@ module Emot
     :"zzz"                             => ["1F4A4"]
   }.freeze
 end
-
