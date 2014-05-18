@@ -5,20 +5,12 @@ require "emot/cli"
 
 module Emot
   def icon(name)
-    if codes = MAP[name.intern]
-      build_icon(codes)
-    else
-      nil
-    end
+    build_icon( MAP[name.intern] )
   end
   alias :emoji :icon
 
   def unicode(name)
-    if codes = MAP[name.intern]
-      build_unicode(codes)
-    else
-      nil
-    end
+    build_unicode( MAP[name.intern] )
   end
 
   def list
@@ -29,11 +21,11 @@ module Emot
 
   private
   def build_icon(codes)
-    codes.map { |code| code.to_i(16) }.pack("U*")
+    codes.map { |code| code.to_i(16) }.pack("U*") if codes
   end
 
   def build_unicode(codes)
-    codes.map { |code| "U+#{code}" }.join(" ")
+    codes.map { |code| "U+#{code}" }.join(" ") if codes
   end
 
   extend self
