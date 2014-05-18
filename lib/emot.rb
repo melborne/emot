@@ -14,9 +14,11 @@ module Emot
   end
 
   def list
-    MAP.map do |name, codes|
-      [name, [build_icon(codes), build_unicode(codes)]]
-    end.sort_by(&:last).to_h
+    Hash[
+      MAP.map do |name, codes|
+        [name, [build_icon(codes), build_unicode(codes)]]
+      end.sort_by(&:last)
+    ]
   end
 
   private
