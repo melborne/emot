@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["postagie@gmail.com"]
   spec.summary       = %q{Yet another emoji handler.}
   spec.description   = %q{Yet another emoji handler.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/melborne/emot"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
