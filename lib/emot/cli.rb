@@ -36,13 +36,15 @@ module Emot
     end
 
     desc "icons", "show all emoji icons"
+    option :inline, aliases:'-i', default:true, type: :boolean
     def icons
-      CLI.start(['show', '--only', 'emoji', '--inline', false])
+      CLI.start(['show', '--only', 'emoji', '--inline', options[:inline].to_s])
     end
 
     desc "names", "show all available names for emoji"
+    option :inline, aliases:'-i', default:false, type: :boolean
     def names
-      CLI.start(['show', '--only', 'nameonly'])
+      CLI.start(['show', '--only', 'nameonly', '--inline', options[:inline].to_s])
     end
 
     no_tasks do
