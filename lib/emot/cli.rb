@@ -47,6 +47,12 @@ module Emot
       CLI.start(['show', '--only', 'nameonly', '--inline', options[:inline].to_s])
     end
 
+    desc "version", "Show Emot version"
+    def version
+      puts "Emot #{Emot::VERSION} (c) 2014 kyoendo"
+    end
+    map "-v" => :version
+
     no_tasks do
       def c(str, color=32)
         "\e[#{color}m#{str}\e[0m"
