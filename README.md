@@ -55,7 +55,7 @@ puts ~:"The pencil is mightier than gun"
 puts ~:"dango is better than sunflower"
 puts ~:"疲れたら beer を飲もう！"
 puts ~:"fish + hocho => sushi"
-puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
+puts ~:".fish + .hocho => sushi" # escape emoji with prefix dot.
 
 # >> 😄
 # >> 🔰
@@ -67,7 +67,7 @@ puts ~:".fush + .hocho => sushi" # escape emoji with prefix dot.
 # >> 🍡 is better than 🌻
 # >> 疲れたら 🍺 を飲もう！
 # >> 🐟 + 🔪 => 🍣
-# >> fush + hocho => 🍣
+# >> fish + hocho => 🍣
 ```
 
 ## Thank you
